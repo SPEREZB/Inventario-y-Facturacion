@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header">
+        DATOS DE FACTURA
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Cedula</th>
+                    <th>Razon Social</th> 
+                    <th>Direccion</th> 
+                    <th>Telefono</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dato of productos; let control=index">
+                    <td>{{dato.idfact}}</td>
+                    <td>{{dato.cedula}}</td>
+                    <td>{{dato.razonsocial}}</td> 
+                    <td>{{dato.direccion}}</td> 
+                    <td>{{dato.telefono}}</td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

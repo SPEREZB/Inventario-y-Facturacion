@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header">
+        AGREGAR
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formulariocedula" (ngSubmit)="enviardatos()">
+            <div class="mb-3">
+              <label for="" class="form-label">ID DEL PRODUCTO:</label>
+              <input type="texth"
+                class="form-control" name="" formControlName="idproducto" id="" aria-describedby="helpId" placeholder="Escriba el id del producto">
+
+                <label for="" class="form-label">NOMBRE DEL PRODUCTO:</label>
+                <input type="texth"
+                  class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Escriba nombre de producto">
+  
+                <label for="" class="form-label">CANTIDAD:</label>
+                <input type="texth"
+                  class="form-control" name="" formControlName="cant" id="" aria-describedby="helpId" placeholder="Escriba cantidad">
+     
+                  <label for="" class="form-label">PRECIO:</label>
+                  <input type="texth"
+                    class="form-control" name="" formControlName="precio" id="" aria-describedby="helpId" placeholder="Escriba el precio">
+       
+            </div> 
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-success">AGREGAR</button> 
+            </div>
+        </form>
+    </div>
+</div>

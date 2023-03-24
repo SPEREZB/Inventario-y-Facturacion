@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header">
+        Agregar CLIENTE
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formulariocedula" (ngSubmit)="enviardatos()">
+            <div class="mb-3">
+              <label for="" class="form-label">CEDULA:</label>
+              <input type="texth"
+                class="form-control" name="" formControlName="idcliente" id="" aria-describedby="helpId" placeholder="Escriba su cedula">
+
+              <label for="" class="form-label">RAZON SOCIAL:</label>
+              <input type="texth"
+                class="form-control" name="" formControlName="razonsocial" id="" aria-describedby="helpId" placeholder="Escriba su cedula">
+
+              <label for="" class="form-label">DIRECCION:</label>
+              <input type="texth"
+                class="form-control" name="" formControlName="direccion" id="" aria-describedby="helpId" placeholder="Escriba su cedula">
+  
+              <label for="" class="form-label">TELEFONO:</label>
+              <input type="texth"
+                class="form-control" name="" formControlName="telefono" id="" aria-describedby="helpId" placeholder="Escriba su cedula">
+    
+            </div> 
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-success">REGISTRAR</button> 
+            </div>
+        </form>
+    </div>
+</div>

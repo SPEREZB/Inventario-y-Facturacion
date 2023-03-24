@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-header">
+        PRODUCTOS
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Cant</th> 
+                    <th>Precio</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dato of productos; let control=index">
+                    <td>{{dato.id}}</td>
+                    <td>{{dato.nombre}}</td>
+                    <td>{{dato.cantidad}}</td> 
+                    <td>{{dato.precio}}</td> 
+                </tr>
+            </tbody>
+        </table>
+ 
+    </div>
+</div>

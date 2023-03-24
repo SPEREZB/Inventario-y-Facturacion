@@ -1,0 +1,104 @@
+<div class="card">
+    <div class="card-header">
+        FACTURAR
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formulariocedula" (ngSubmit)="enviardatos()">
+            <div class="mb-3">
+
+                <label for="" class="form-label">CEDULA:</label>
+                <input type="texth"
+                  class="form-control" name="" formControlName="cedula" id="" aria-describedby="helpId" placeholder="Escriba su cedula">  
+
+              <label for="" class="form-label">ID DEL PRODUCTO:</label>
+              <input type="texth"
+                class="form-control" name="" formControlName="idproduc" id="idp" aria-describedby="helpId" placeholder="Escriba el id del producto">
+
+              
+                <label for="" class="form-label">CANTIDAD:</label>
+                <input type="texth"
+                  class="form-control"  name="" formControlName="cant" id="" aria-describedby="helpId" placeholder="Escriba cantidad">
+      
+            </div> 
+            <div class="btn-group" role="group" aria-label="">
+              <button type="submit" class="btn btn-info">AGREGAR</button> 
+          </div>
+          <div class="btn-group" role="group" aria-label="">
+            <button type="button" class="btn btn-success" (click)="hacerfactura()">ACEPTAR</button> 
+        </div> 
+        </form>
+    </div>  
+</div>
+
+<div class="card">
+  <div class="card-header" 
+  style="color: white; background-color: black; font-style: italic;
+  font-family: 'Times New Roman', Times, serif;" 
+  class="card-header">
+  <b> DATOS DE CLIENTE</b>
+  </div>
+  <div class="card-body">
+      <table class="table">
+          <thead>
+              <tr>
+                 <th>IdFactura</th>
+                  <th>Cedula</th>
+                  <th>Razon Social</th>
+                  <th>Direccion</th> 
+                  <th>Telefono</th>  
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{fact.idfact}}</td>
+              <td>{{fact.cedula}}</td>  
+              <td>{{fact.razonsocial}}</td>
+              <td>{{fact.direccion}}</td> 
+              <td>{{fact.telefono}}</td>   
+          </tr>
+          </tbody> 
+      </table>
+  </div>
+</div>
+
+<div class="card">
+  <div style="color: white; 
+  background-color: black; 
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;" 
+  class="card-header">
+      <b>DATOS DEL PRODUCTO </b> 
+  </div>
+  <div class="card-body">
+      <table class="table">
+          <thead style="color: white; background-color: black;">
+              <tr style="font-style: italic;
+              font-family: 'Times New Roman', Times, serif;
+              font-size: 25px;" 
+              class="table-warning"> 
+                  <th style ="color: white; background-color: black;position: relative; left: 600px;">Productos</th> 
+                  <th style ="color: white; background-color: black;position: relative; left: 500px;">Cantidad</th> 
+                  <th style ="color: white; background-color: black;position: relative; left: 400px;">Precio</th> 
+                  <th style ="color: white; background-color: black;position: relative; left: 350px;">Descuento</th> 
+                  <th style ="color: white; background-color: black;position: relative; left: 250px;">Precio con descuento</th> 
+              </tr>
+          </thead>
+          <tbody> 
+            <tr *ngFor="let dato of detfact; let control=index">  
+              <td style ="color: white; background-color: black;position: relative; left: 600px;">{{dato.producto}}</td>
+              <td style ="color: white; background-color: black;position: relative; left: 500px;">{{dato.cant}}</td> 
+              <td style ="color: white; background-color: black;position: relative; left: 400px;">{{dato.precio}}</td> 
+              <td style ="color: white; background-color: black;position: relative; left: 350px;">{{dato.descuento}}</td> 
+              <td style ="color: white; background-color: black;position: relative; left: 250px;">{{dato.preciodesc}}</td>  
+          </tr>
+          </tbody> 
+     
+          <tfoot> 
+            <tr *ngFor="let dato of detfactpie; let control=index">  
+              <td style ="position: relative; left: 600px;">Sub total: {{dato.precio}}</td> 
+              <td style ="position: relative; left: 320px;top: 20px;">TOTAL: {{dato.precio2}}</td> 
+          </tr>
+          </tfoot>
+      </table>
+  </div>
+</div>
